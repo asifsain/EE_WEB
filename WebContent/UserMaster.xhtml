@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"> 
+
+<h:head></h:head> 
+<h:body>
+<h:form>
+<div>
+<table>
+<tr>
+<td><label>Name : </label></td>
+<td><h:inputText  name="userName" value="#{cart.name}" valueChangeListener="#{cart.handleUserNameChange}" /></td>
+<td><label>Password : </label></td>
+<td><input type="password" name="password" value="#{cart.password}"/></td>
+<td><label>Email : </label></td>
+<td><h:inputText   name="email" value="#{cart.email}" /></td>
+<td><label>Container Id : </label></td>
+<td><h:inputText   name="containerId" value="#{cart.containerId}" /></td>
+</tr>
+<tr><td><button name="Save"  type="submit" value="Simple Submit"></button></td></tr>
+<tr><td><h:commandButton action="#{cart.pageSubmitted}" name="Save_Main"  value="Comnd Submit" actionListener="#{cart.buttonAction}" /></td></tr>
+</table> 
+
+
+</div>
+</h:form>
+</h:body> 
+</html>
